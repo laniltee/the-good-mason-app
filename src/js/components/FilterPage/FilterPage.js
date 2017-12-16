@@ -14,7 +14,7 @@ const contentRow = {
   paddingRight: "60px"
 }
 
-const FilterPage = () => (
+const FilterPage = (props) => (
   <div>
     <div className='row' style={topRow}>
       <div className='col-2'>
@@ -25,7 +25,7 @@ const FilterPage = () => (
       </div>
       <div className='col-2'>
         <span className='float-right'>
-          <img src={close}/>
+          <img onClick={props.changeScreen} src={close}/>
         </span>
       </div>
     </div>
@@ -79,7 +79,7 @@ const FilterPage = () => (
       </div>
     </div>
     <div className='row' style={contentRow}>
-      <button type="button" className="btn btn-lg btn-block primaryButton">See Results</button>
+      <button onClick={props.changeScreen} type="button" className="btn btn-lg btn-block primaryButton">See Results</button>
     </div>
   </div>
 )

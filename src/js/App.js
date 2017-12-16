@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 
 import DiscoverPage from './components/DiscoverPage/DiscoverPage'
 import FilterPage from './components/FilterPage/FilterPage'
+import LoginPage from './components/LoginPage/LoginPage'
 
 import '../css/bootstrap.css'
 
@@ -16,13 +17,46 @@ const appStyle = {
 }
 
 export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      screen: 'login'
+    }
+
+    this.switchScreen = this.switchScreen.bind(this)
+  }
+
+  switchScreen(key) {
+    this.setState({screen: key})
+  }
+
   render() {
-    return (
-      <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-        <DiscoverPage/>
-        {/*<FilterPage/>*/}
-      </div>
-    );
+    switch (this.state.screen) {
+      case 'discover':
+        return (
+          <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
+            <DiscoverPage changeScreen={() => this.switchScreen('filter')}/>
+          </div>
+        )
+      case 'filter':
+        return (
+          <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
+            <FilterPage changeScreen={() => this.switchScreen('discover')}/>
+          </div>
+        )
+      case 'login':
+        return (
+          <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
+            <LoginPage changeScreen={() => this.switchScreen('discover')}/>
+          </div>
+        )
+      default:
+        return (
+          <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
+            <DiscoverPage/>
+          </div>
+        )
+    }
   };
 }
 

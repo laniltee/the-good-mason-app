@@ -10,7 +10,7 @@ const headerStyle = {
   marginBottom: "20px"
 }
 
-const DiscoveryHeader = () => (
+const DiscoveryHeader = (props) => (
   <div style={headerStyle}>
     <div className={'row'}>
       <div className={'col-10'}>
@@ -18,7 +18,7 @@ const DiscoveryHeader = () => (
         <p>Find the perfect service</p>
       </div>
       <div className={'col-2'}>
-        <img className={'float-right'} src={slider} alt={'search'}/>
+        <img onClick={props.changeScreen} className={'float-right'} src={slider} alt={'search'}/>
       </div>
     </div>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Any service provider"/>

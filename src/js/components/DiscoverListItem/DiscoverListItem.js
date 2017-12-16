@@ -27,7 +27,7 @@ const DiscoverListItem = () => (
         <img className={'img-fluid rounded'} src={profile}/>
       </div>
       <div className={'col-8'}>
-        <h5 className='zeroBottomPara'>John Doe</h5>
+        <h5 className='zeroBottomPara'>Nimal Perera</h5>
         <p className='greyPara'>Mason at Rajagiriya</p>
       </div>
       <div className={'col-2'} style={imageColStyle}>

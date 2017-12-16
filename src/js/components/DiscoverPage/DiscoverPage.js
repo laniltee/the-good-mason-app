@@ -4,9 +4,9 @@ import BottomNavigation from '../BottomNavigation/BottomNavigation'
 import DiscoveryHeader from '../DiscoverHeader/DiscoveryHeader'
 import DiscoverList from '../DiscoverList/DiscoverList'
 
-const DiscoverPage = () => (
+const DiscoverPage = (props) => (
   <div>
-    <DiscoveryHeader/>
+    <DiscoveryHeader changeScreen={props.changeScreen}/>
     <DiscoverList/>
     <BottomNavigation/>
   </div>
