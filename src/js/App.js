@@ -5,6 +5,7 @@ import DiscoverPage from './components/DiscoverPage/DiscoverPage'
 import FilterPage from './components/FilterPage/FilterPage'
 import LoginPage from './components/LoginPage/LoginPage'
 import ProfilePage from './components/ProfilePage/ProfilePage'
+import ReviewPage from './components/ReviewPage/ReviewPage'
 
 import '../css/bootstrap.css'
 
@@ -21,7 +22,7 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      screen: 'profile'
+      screen: 'review'
     }
 
     this.switchScreen = this.switchScreen.bind(this)
@@ -55,6 +56,12 @@ export default class App extends Component {
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
             <ProfilePage changeScreen={() => this.switchScreen('discover')}/>
+          </div>
+        )
+      case 'review':
+        return (
+          <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
+            <ReviewPage changeScreen={() => this.switchScreen('profile')}/>
           </div>
         )
       default:

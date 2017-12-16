@@ -11,7 +11,7 @@ import './profilePageStyle.css'
 const headerStyle = {
   color: 'white',
   backgroundColor: '#f46524',
-  height: "159px",
+  height: "59px",
   padding: "20px",
   marginBottom: "20px"
 }
@@ -36,7 +36,7 @@ const ProfilePage = () => (
       </div>
       <div className='col-4'></div>
     </div>
-    <h3 className='text-center'>Nimal Perera</h3>
+    <h3 className='text-center zeroBottomPara'>Nimal Perera</h3>
     <p className='greyPara text-center'>Mason at Rajagiriya</p>
     <p className='text-center zeroBottomPara'>
       <img className={'img-fluid'} src={star}/>

@@ -1,0 +1,11 @@
+#reviewWrapper{
+  padding: 30px;
+}
+
+.reviewer{
+  font-weight: bold;
+}
+
+#reviewHeader{
+  margin-bottom: 35px;
+}
