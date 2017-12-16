@@ -10,11 +10,11 @@ const LoginPage = (props) => (
     <p className='whitePara text-center' style={{marginBottom: '70px'}}>Find the perfect service for you</p>
 
     <form className=''>
-      <div class="form-group">
-        <input type="text" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username"/>
+      <div className="form-group">
+        <input type="text" className="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username"/>
       </div>
-      <div class="form-group">
-        <input type="password" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password"/>
+      <div className="form-group">
+        <input type="password" className="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password"/>
       </div>
     </form>
     <button type="button" onClick={props.changeScreen} className="btn loginBtn btn-lg btn-block">SIGN IN</button>

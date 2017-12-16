@@ -46,3 +46,12 @@ body{
 .zeroMargin {
   margin: 0px;
 }
+
+.twoWayPadding {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+#tabBar{
+
+}

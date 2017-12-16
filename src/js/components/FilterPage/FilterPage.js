@@ -25,7 +25,7 @@ const FilterPage = (props) => (
       </div>
       <div className='col-2'>
         <span className='float-right'>
-          <img onClick={props.changeScreen} src={close}/>
+          <img onClick={props.changeScreen('discover')} src={close}/>
         </span>
       </div>
     </div>
@@ -40,8 +40,8 @@ const FilterPage = (props) => (
         <button type="button" className="btn btn-outline-warning outlinePrimaryButton">Gardeners</button>
         <button type="button" className="btn btn-outline-warning outlinePrimaryButton">Tile Work</button>
         <button type="button" className="btn btn-outline-warning outlinePrimaryButton">Tree Cutting</button>
+        <p className='text-center greyPara'>more services</p>
       </div>
-      <p className='text-center'>more services</p>
     </div>
     <div className='row' style={contentRow}>
       <h3>Rating</h3>
@@ -79,7 +79,7 @@ const FilterPage = (props) => (
       </div>
     </div>
     <div className='row' style={contentRow}>
-      <button onClick={props.changeScreen} type="button" className="btn btn-lg btn-block primaryButton">See Results</button>
+      <button onClick={props.changeScreen('discover')} type="button" className="btn btn-lg btn-block primaryButton">See Results</button>
     </div>
   </div>
 )

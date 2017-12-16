@@ -1,0 +1,9 @@
+#directionsLink{
+  text-decoration: underline;
+  color: #f46524;
+}
+
+#actionRow{
+  padding-left: 100px;
+  padding-right:100px;
+}

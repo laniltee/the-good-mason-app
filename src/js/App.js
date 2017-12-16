@@ -4,6 +4,7 @@ import {render} from 'react-dom';
 import DiscoverPage from './components/DiscoverPage/DiscoverPage'
 import FilterPage from './components/FilterPage/FilterPage'
 import LoginPage from './components/LoginPage/LoginPage'
+import ProfilePage from './components/ProfilePage/ProfilePage'
 
 import '../css/bootstrap.css'
 
@@ -20,7 +21,7 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      screen: 'login'
+      screen: 'profile'
     }
 
     this.switchScreen = this.switchScreen.bind(this)
@@ -48,6 +49,12 @@ export default class App extends Component {
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
             <LoginPage changeScreen={() => this.switchScreen('discover')}/>
+          </div>
+        )
+      case 'profile':
+        return (
+          <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
+            <ProfilePage changeScreen={() => this.switchScreen('discover')}/>
           </div>
         )
       default:
