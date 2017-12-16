@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+#rootApp{
+  font-family: "Ubuntu";
+}
+
+.zeroBottomPara {
+  margin-bottom: 0px;
+}
+
+.greyPara {
+  color: #868e96
+}
+
+.orangeBackground {
+  background-color: #f46524;
+}
+
+.primaryButton {
+  background-color: #f46524;
+  color: white;
+}
+
+.outlinePrimaryButton{
+  border-color: #f46524;
+  color: #f46524;
+  background-color: white;
+}
+
+.whitePara {
+  color: white;
+}
+
+.zeroLeftPadding {
+  padding-left: 0px;
+}
+
+#filterButtonSet .outlinePrimaryButton, #filterButtonSet .primaryButton{
+  margin: 4px;
+}
+
+.zeroMargin {
+  margin: 0px;
+}

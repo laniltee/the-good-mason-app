@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/
+
+#Idea workspace
+.idea
+
+#Production bundle
+dist
+
+npm-debug.log
+
+
+
