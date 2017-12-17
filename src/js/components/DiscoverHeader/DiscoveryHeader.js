@@ -18,7 +18,7 @@ const DiscoveryHeader = (props) => (
         <p>Find the perfect service</p>
       </div>
       <div className={'col-2'}>
-        <img onClick={props.changeScreen} className={'float-right'} src={slider} alt={'search'}/>
+        <img onClick={() => props.changeScreen('filter')} className={'float-right'} src={slider} alt={'search'}/>
       </div>
     </div>
     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Any service provider"/>

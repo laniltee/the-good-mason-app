@@ -24,13 +24,14 @@ export default class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      screen: 'inbox'
+      screen: 'login'
     }
 
     this.switchScreen = this.switchScreen.bind(this)
   }
 
   switchScreen(key) {
+    console.log('switchScreen: ' + key)
     this.setState({screen: key})
   }
 
@@ -39,43 +40,43 @@ export default class App extends Component {
       case 'discover':
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <DiscoverPage changeScreen={() => this.switchScreen('filter')}/>
+            <DiscoverPage changeScreen={this.switchScreen}/>
           </div>
         )
       case 'filter':
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <FilterPage changeScreen={() => this.switchScreen('discover')}/>
+            <FilterPage changeScreen={this.switchScreen}/>
           </div>
         )
       case 'login':
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <LoginPage changeScreen={() => this.switchScreen('discover')}/>
+            <LoginPage changeScreen={this.switchScreen}/>
           </div>
         )
       case 'profile':
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <ProfilePage changeScreen={() => this.switchScreen('discover')}/>
+            <ProfilePage changeScreen={this.switchScreen}/>
           </div>
         )
       case 'review':
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <ReviewPage changeScreen={() => this.switchScreen('profile')}/>
+            <ReviewPage changeScreen={this.switchScreen}/>
           </div>
         )
       case 'inbox':
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <InboxPage changeScreen={() => this.switchScreen('profile')}/>
+            <InboxPage changeScreen={this.switchScreen}/>
           </div>
         )
       default:
         return (
           <div id={'rootApp'} className={"wrapper container"} style={appStyle}>
-            <DiscoverPage/>
+            <DiscoverPage changeScreen={this.switchScreen}/>
           </div>
         )
     }

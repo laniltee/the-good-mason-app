@@ -17,7 +17,7 @@ const LoginPage = (props) => (
         <input type="password" className="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password"/>
       </div>
     </form>
-    <button type="button" onClick={props.changeScreen} className="btn loginBtn btn-lg btn-block">SIGN IN</button>
+    <button type="button" onClick={() => props.changeScreen('discover')} className="btn loginBtn btn-lg btn-block">SIGN IN</button>
     <p className='whitePara text-center'>Don't have an account? <u>Sign Up</u></p>
   </div>
 )

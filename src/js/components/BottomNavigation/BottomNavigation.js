@@ -11,9 +11,9 @@ const bottomNavigationStyle = {
   padding: '8px'
 }
 
-const BottomNavigation = () => (
+const BottomNavigation = (props) => (
   <div className="row text-center fixed-bottom" style={bottomNavigationStyle}>
-    <div className="col">
+    <div className="col" onClick={() => props.changeScreen('discover')}>
       <img src={search} alt={'search'}/>
       <p>Discover</p>
     </div>
@@ -21,7 +21,7 @@ const BottomNavigation = () => (
       <img src={nearby} alt={'search'}/>
       <p>Nearby</p>
     </div>
-    <div className="col">
+    <div className="col" onClick={() => props.changeScreen('inbox')}>
       <img src={inbox} alt={'search'}/>
       <p>Inbox</p>
     </div>

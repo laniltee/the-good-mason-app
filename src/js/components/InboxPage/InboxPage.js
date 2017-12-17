@@ -1,6 +1,7 @@
 import React from 'react';
 
 import InboxListItem from '../InboxListItem/InboxListItem'
+import BottomNavigation from '../BottomNavigation/BottomNavigation'
 
 import search from './search.png'
 
@@ -12,7 +13,7 @@ const headerStyle = {
   marginBottom: "20px"
 }
 
-const InboxPage = () => (
+const InboxPage = (props) => (
   <div>
     <div style={headerStyle}>
       <div className={'row'}>
@@ -30,6 +31,7 @@ const InboxPage = () => (
     <InboxListItem/>
     <InboxListItem/>
     <InboxListItem/>
+    <BottomNavigation changeScreen={props.changeScreen}/>
   </div>
 )
 

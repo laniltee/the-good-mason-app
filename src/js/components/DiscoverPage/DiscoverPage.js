@@ -7,8 +7,8 @@ import DiscoverList from '../DiscoverList/DiscoverList'
 const DiscoverPage = (props) => (
   <div>
     <DiscoveryHeader changeScreen={props.changeScreen}/>
-    <DiscoverList/>
-    <BottomNavigation/>
+    <DiscoverList  changeScreen={props.changeScreen}/>
+    <BottomNavigation  changeScreen={props.changeScreen}/>
   </div>
 )
 

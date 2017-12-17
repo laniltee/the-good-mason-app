@@ -25,7 +25,7 @@ const FilterPage = (props) => (
       </div>
       <div className='col-2'>
         <span className='float-right'>
-          <img onClick={props.changeScreen('discover')} src={close}/>
+          <img onClick={() => props.changeScreen('discover')} src={close}/>
         </span>
       </div>
     </div>
@@ -79,7 +79,7 @@ const FilterPage = (props) => (
       </div>
     </div>
     <div className='row' style={contentRow}>
-      <button onClick={props.changeScreen('discover')} type="button" className="btn btn-lg btn-block primaryButton">See Results</button>
+      <button onClick={() => props.changeScreen('discover')} type="button" className="btn btn-lg btn-block primaryButton">See Results</button>
     </div>
   </div>
 )

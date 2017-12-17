@@ -7,11 +7,11 @@ import './reviewStyle.css'
 
 import left from './left.png'
 
-const ReviewPage = () => (
+const ReviewPage = (props) => (
   <div id={'reviewWrapper'}>
     <div className='row'>
       <div className='col'>
-        <img src={left}/>
+        <img src={left} onClick={() => props.changeScreen('profile')}/>
       </div>
     </div>
     <h1 id={'reviewHeader'}>Reviews</h1>
